@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project ForCarrie with Jar-in-Jar Loader">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="C:/Users/ninja/Desktop/ForCarrie.jar">
+            <manifest>
+                <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
+                <attribute name="Rsrc-Main-Class" value="Game"/>
+                <attribute name="Class-Path" value="."/>
+                <attribute name="Rsrc-Class-Path" value="./ lwjgl.jar slick-util.jar"/>
+            </manifest>
+            <zipfileset src="jar-in-jar-loader.zip"/>
+            <fileset dir="C:/Users/ninja/workspace/ForCarrie/bin"/>
+            <zipfileset dir="C:\Users\ninja\workspace\libraries\lwjgl-2.8.5\jar" includes="lwjgl.jar"/>
+            <zipfileset dir="C:\Users\ninja\workspace\libraries" includes="slick-util.jar"/>
+        </jar>
+    </target>
+</project>
